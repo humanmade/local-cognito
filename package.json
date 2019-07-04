@@ -1,0 +1,22 @@
+{
+  "name": "local-cognito",
+  "version": "0.1.0",
+  "repository": "https://github.com/humanmade/local-cognito",
+  "description": "Local Test Server for AWS Cognito",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro",
+    "lint": "eslint --fix ."
+  },
+  "author": "Human Made Limited <hello@humanmade.com>",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "micro": "^9.3.4",
+    "micro-fork": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0"
+  }
+}
