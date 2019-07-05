@@ -42,7 +42,7 @@ module.exports = router()(
 		// Get existing ID.
 		if ( req.headers['x-amz-target'] === 'AWSCognitoIdentityService.GetCredentialsForIdentity' ) {
 			const expiration = new Date();
-			expiration.setTime(Date.now() + (365 * 24 * 60 * 60 * 1000));
+			expiration.setTime(Date.now() + (60 * 60 * 1000));
 			send( res, 200, {
 				'Credentials': {
 					'AccessKeyId': 'not-needed',
