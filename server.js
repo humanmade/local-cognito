@@ -42,15 +42,15 @@ module.exports = router()(
 		// Get existing ID.
 		if ( req.headers['x-amz-target'] === 'AWSCognitoIdentityService.GetCredentialsForIdentity' ) {
 			const expiration = new Date();
-			expiration.setTime(Date.now() + (60 * 60 * 1000));
+			expiration.setTime(expiration.getTime() + (60 * 60 * 1000));
 			send( res, 200, {
-				'Credentials': {
-					'AccessKeyId': 'not-needed',
-					'Expiration': expiration.toISOString(),
-					'SecretKey': 'not-needed',
-					'SessionToken': 'not-needed',
+				Credentials: {
+					AccessKeyId: 'not-needed',
+					Expiration: expiration.toISOString(),
+					SecretKey: 'not-needed',
+					SessionToken: 'not-needed',
 				},
-				'IdentityId': body.IdentityId,
+				IdentityId: body.IdentityId,
 			} );
 			return;
 		}
@@ -58,7 +58,7 @@ module.exports = router()(
 		// Get new ID.
 		if ( req.headers['x-amz-target'] === 'AWSCognitoIdentityService.GetId' ) {
 			send( res, 200, {
-				'IdentityId': `us-east-1:${uuid()}`,
+				IdentityId: `us-east-1:${uuid()}`,
 			} );
 			return;
 		}
