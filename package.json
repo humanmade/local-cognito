@@ -13,10 +13,10 @@
   "license": "GPL-2.0-or-later",
   "dependencies": {
     "micro": "^9.3.4",
-    "micro-fork": "^2.0.0"
+    "micro-fork": "^3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^5.16.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0"
   }
 }
