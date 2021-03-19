@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "micro",
+    "start": "micro -l tcp://0.0.0.0:8235",
     "lint": "eslint --fix ."
   },
   "author": "Human Made Limited <hello@humanmade.com>",
